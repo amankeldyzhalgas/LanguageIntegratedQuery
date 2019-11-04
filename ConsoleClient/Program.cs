@@ -14,20 +14,32 @@ namespace ConsoleClient
         static void Main(string[] args)
         {
             var path = ConfigurationManager.AppSettings["sourceFilePath"];
-            //string path = ".\\results.dat";
-            //List<Result> list = new List<Result>(){
-            //    new Result("H", ".NET", DateTime.Today, 4),
-            //    new Result("E", ".JAVA", new DateTime(2019,11,1), 5),
-            //    new Result("O", "PHP", new DateTime(2019,10,30), 3),
-            //    new Result("M", ".NET", new DateTime(2019,11,1), 3),
-            //    new Result("P", "PHP", new DateTime(2019,10,30), 5),
-            //    new Result("B", "JAVA", new DateTime(2019,11,1), 4),
-            //};
-            //WriteToFile(list.ToList(), path);
+
+            /*
+            List<Result> list = new List<Result>(){
+                new Result("H", ".NET", DateTime.Today, 4),
+                new Result("E", ".JAVA", new DateTime(2019,11,1), 5),
+                new Result("O", "PHP", new DateTime(2019,10,30), 3),
+                new Result("M", ".NET", new DateTime(2019,11,1), 3),
+                new Result("P", "PHP", new DateTime(2019,10,30), 5),
+                new Result("B", "JAVA", new DateTime(2019,11,1), 4),
+            };
+            WriteToFile(list.ToList(), path);
+            */
 
             var results = new BinarySearchTree<Result>(GetData(path));
+            //DisplayData(results, null);
+            DisplayData(results, "STA");
 
             Console.ReadLine();
+        }
+
+        private static void DisplayData(BinarySearchTree<Result> results, string format)
+        {
+            foreach (var item in results.Inorder())
+            {
+                Console.WriteLine(value: item.ToString(format));
+            }
         }
 
         private static List<Result> GetData(string filePath)
