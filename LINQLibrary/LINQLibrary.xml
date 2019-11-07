@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LINQLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:LINQLibrary.Result">
+            <summary>
+            Result class.
+            </summary>
+        </member>
+        <member name="M:LINQLibrary.Result.#ctor(System.String,System.String,System.DateTime,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:LINQLibrary.Result"/> class.
+            </summary>
+            <param name="studentName">StudentName.</param>
+            <param name="testName">TestName.</param>
+            <param name="date">Date.</param>
+            <param name="assessment">Assessment.</param>
+        </member>
+        <member name="P:LINQLibrary.Result.StudentName">
+            <summary>
+            Gets StudentName.
+            </summary>
+        </member>
+        <member name="P:LINQLibrary.Result.TestName">
+            <summary>
+            Gets TestName.
+            </summary>
+        </member>
+        <member name="P:LINQLibrary.Result.Date">
+            <summary>
+            Gets Date.
+            </summary>
+        </member>
+        <member name="P:LINQLibrary.Result.Assessment">
+            <summary>
+            Gets Assessment.
+            </summary>
+        </member>
+        <member name="M:LINQLibrary.Result.CompareTo(System.Object)">
+            <summary>
+            Returns int result of the comparisons.
+            </summary>
+            <param name="obj">Comparable object.</param>
+            <returns>Returns 0 if books are equal, 1 if first result bigger than second, -1 in other cases.</returns>
+        </member>
+        <member name="M:LINQLibrary.Result.CompareTo(LINQLibrary.Result)">
+            <summary>
+            Returns int result of the comparisons.
+            </summary>
+            <param name="other">Comparable result.</param>
+            <returns>Returns 0 if books are equal, 1 if first result bigger than second, -1 in other cases.</returns>
+        </member>
+        <member name="M:LINQLibrary.Result.Equals(System.Object)">
+            <summary>
+            Checks if books equal.
+            </summary>
+            <param name="obj">Other object.</param>
+            <returns>Returns true if results are equal. False - don't equal.</returns>
+        </member>
+        <member name="M:LINQLibrary.Result.Equals(LINQLibrary.Result)">
+            <summary>
+            Checks if results equal.
+            </summary>
+            <param name="other">Other result.</param>
+            <returns>Returns true if results are equal. False - don't equal.</returns>
+        </member>
+        <member name="M:LINQLibrary.Result.GetHashCode">
+            <summary>
+            Get  hash code.
+            </summary>
+            <returns>Returns hash code.</returns>
+        </member>
+        <member name="M:LINQLibrary.Result.ToString">
+            <summary>
+            Returns information about result.
+            </summary>
+            <returns>String Representation of the result.</returns>
+        </member>
+        <member name="M:LINQLibrary.Result.ToString(System.String)">
+            <summary>
+            Returns information about Result.
+            </summary>
+            <param name="format">Letter of the format.</param>
+            <returns>String Representation of the result.</returns>
+        </member>
+        <member name="M:LINQLibrary.Result.ToString(System.String,System.IFormatProvider)">
+            <summary>
+            Returns information about Result.
+            </summary>
+            <param name="format">Letter of the format.</param>
+            <param name="formatProvider">IFormatProvider.</param>
+            <returns>String Representation of the result.</returns>
+        </member>
+        <member name="T:LINQLibrary.ResultExtension">
+            <summary>
+            .
+            </summary>
+        </member>
+        <member name="T:LINQLibrary.ResultExtension.SortDirection">
+            <summary>
+            Enum SortDirection.
+            </summary>
+        </member>
+        <member name="M:LINQLibrary.ResultExtension.Sort``1(System.Collections.Generic.List{LINQLibrary.Result}@,System.Func{LINQLibrary.Result,``0},LINQLibrary.ResultExtension.SortDirection,System.Int32)">
+            <summary>
+            .
+            </summary>
+            <typeparam name="TKey">Is the generic type of the "key".</typeparam>
+            <param name="list">List of results.</param>
+            <param name="sorter">Lambda delegate.</param>
+            <param name="direction">Sort Direction.</param>
+            <param name="rowCount">Row count.</param>
+        </member>
+        <member name="T:LINQLibrary.ResultService">
+            <summary>
+            .
+            </summary>
+        </member>
+        <member name="P:LINQLibrary.ResultService.Results">
+            <summary>
+            Gets Results.
+            </summary>
+        </member>
+        <member name="M:LINQLibrary.ResultService.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:LINQLibrary.ResultService"/> class.
+            </summary>
+            <param name="filePath">sourcePath.</param>
+        </member>
+        <member name="M:LINQLibrary.ResultService.Add(LINQLibrary.Result)">
+            <summary>
+            Add result to list.
+            </summary>
+            <param name="result">New result.</param>
+        </member>
+        <member name="M:LINQLibrary.ResultService.Remove(LINQLibrary.Result)">
+            <summary>
+            Remove result from list.
+            </summary>
+            <param name="result">Removable result.</param>
+        </member>
+        <member name="M:LINQLibrary.ResultService.LoadData">
+            <summary>
+            Reads results from the file.
+            </summary>
+            <returns>Return list of Results.</returns>
+        </member>
+        <member name="M:LINQLibrary.ResultService.SaveData">
+            <summary>
+            Writes results to the file.
+            </summary>
+        </member>
+    </members>
+</doc>
